@@ -39,3 +39,12 @@ helloWorldControllers.controller(
         };
     }]
 );
+
+helloWorldControllers.controller(
+    'AddedCustomerCtrl',
+    ['$scope', '$routeParams', function AddedCustomerCtrl($scope, $routeParams) {
+        // populate model
+        $scope.customerName = $routeParams.customer; 
+        $scope.customerCity = $routeParams.city;
+    }]
+);
