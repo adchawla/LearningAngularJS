@@ -18,8 +18,15 @@ helloWorldControllers.controller(
 
 helloWorldControllers.controller(
     'CustomerCtrl',
-    ['$scope', function CustomerCtrl($scope) { 
+    ['$scope', function CustomerCtrl($scope) {
+        // populate model
         $scope.customerName = "Bob's Burgers"; 
-        $scope.customerNumber = "44522"; 
+        $scope.customerNumber = "44522";
+        
+        // add behavior to the scope
+        $scope.changeCustomer = function() {
+            $scope.customerName = $scope.cName;
+            $scope.customerNumber = $scope.cNumber;
+        };
     }]
 ); 
