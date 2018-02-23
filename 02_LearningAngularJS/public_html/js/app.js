@@ -24,6 +24,11 @@ helloWorldApp.config([
                 templateUrl: 'partials/customer.html',
                 controller: 'CustomerCtrl'
             }
+        ).when(
+            '/addCustomer', {
+                templateUrl: 'partials/newCustomer.html',
+                controller: 'AddCustomerCtrl'
+            }
         );
 
         $locationProvider.html5Mode(false).hashPrefix('!');

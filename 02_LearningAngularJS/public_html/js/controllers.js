@@ -29,4 +29,13 @@ helloWorldControllers.controller(
             $scope.customerNumber = $scope.cNumber;
         };
     }]
-); 
+);
+
+helloWorldControllers.controller(
+    'AddCustomerCtrl',
+    ['$scope', '$location', function AddCustomerCtrl($scope, $location) {
+        $scope.submit = function() {
+            $location.path('/addedCustomer/' + $scope.cName + "/" + $scope.cCity);
+        };
+    }]
+);
